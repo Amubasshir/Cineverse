@@ -8,6 +8,7 @@ import './style.scss';
 import PosterFallback from '../../../assets/no-poster.png';
 import CircleRating from '../../../components/circleRating/CircleRating';
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper';
+import Genres from '../../../components/genres/Genres';
 import Img from '../../../components/lazyLoadImage/img';
 import useFetch from '../../../hooks/useFetch';
 
@@ -16,6 +17,8 @@ const DetailsBanner = ({ video, crew }) => {
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
 
   const { url } = useSelector((state) => state.home);
+
+  const _genres = data?.genres?.map((g) => g.id);
 
   const toHoursAndMinutes = (totalMinutes) => {
     const hours = Math.floor(totalMinutes / 60);
@@ -52,6 +55,7 @@ const DetailsBanner = ({ video, crew }) => {
                       ).format('YYYY')})`}
                     </div>
                     <div className="subtitle">{data.tagline}</div>
+                    <Genres data={_genres} />
 
                     <div className="row">
                       <CircleRating rating={data.vote_average.toFixed(1)} />
