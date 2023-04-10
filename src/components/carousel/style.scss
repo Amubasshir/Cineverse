@@ -138,12 +138,21 @@
           }
         }
         .genres {
-          display: none;
-          position: relative;
-          @include md {
-            display: flex;
-            flex-flow: wrap;
-            justify-content: flex-end;
+          position: absolute;
+
+          top: 10px;
+          left: 10px;
+          display: flex;
+          flex-flow: wrap;
+          justify-content: flex-start;
+          z-index: 1;
+          span {
+            margin-right: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 2px 5px;
+            border-radius: 5px;
           }
         }
       }
