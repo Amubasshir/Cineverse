@@ -1,18 +1,20 @@
 import dayjs from 'dayjs';
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-
-import './style.scss';
-
 import PosterFallback from '../../../assets/no-poster.png';
 import CircleRating from '../../../components/circleRating/CircleRating';
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper';
 import Genres from '../../../components/genres/Genres';
 import Img from '../../../components/lazyLoadImage/img';
+import VideoPopup from '../../../components/videoPopup/VideoPopup';
 import useFetch from '../../../hooks/useFetch';
+import { PlayIcon } from '../Playbtn';
+import './style.scss';
 
 const DetailsBanner = ({ video, crew }) => {
+  const [show, setShow] = useState(false);
+  const [videoId, setVideoId] = useState(null);
   const { mediaType, id } = useParams();
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
 
@@ -66,6 +68,7 @@ const DetailsBanner = ({ video, crew }) => {
                           setVideoId(video.key);
                         }}
                       >
+                        <PlayIcon />
                         <span className="text">Watch Trailer</span>
                       </div>
                     </div>
@@ -115,6 +118,12 @@ const DetailsBanner = ({ video, crew }) => {
                     )}
                   </div>
                 </div>
+                <VideoPopup
+                  show={show}
+                  setShow={setShow}
+                  videoId={videoId}
+                  setVideoId={setVideoId}
+                />
               </ContentWrapper>
             </React.Fragment>
           )}
