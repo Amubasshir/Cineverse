@@ -138,14 +138,15 @@
           }
         }
         .genres {
+          display: none;
           position: absolute;
-
           top: 10px;
           left: 10px;
           display: flex;
           flex-flow: wrap;
           justify-content: flex-start;
           z-index: 1;
+
           span {
             margin-right: 5px;
             font-size: 14px;
@@ -156,6 +157,7 @@
           }
         }
       }
+
       .textBlock {
         color: white;
         display: flex;
