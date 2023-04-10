@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-} from 'react-icons/fa';
+import { FaFacebookF, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 import ContentWrapper from '../contentWrapper/ContentWrapper';
 
@@ -22,26 +17,39 @@ const Footer = () => {
           <li className="menuItem">FAQ</li>
         </ul>
         <div className="infoText">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          At Cineverse, we believe that every movie has a story to tell, and we
+          are dedicated to sharing those stories with our audience. From
+          blockbusters to indie darlings, we cover a wide range of films and
+          genres, offering a diverse and engaging perspective on the world of
+          cinema. Thank you for visiting Cineverse, and we hope that our reviews
+          inspire you to explore the wonderful world of movies. Don't forget to
+          follow us on social media to stay up-to-date on the latest in movie
+          news and reviews.
         </div>
         <div className="socialIcons">
-          <span className="icon">
-            <FaFacebookF />
-          </span>
-          <span className="icon">
-            <FaInstagram />
-          </span>
-          <span className="icon">
-            <FaTwitter />
-          </span>
-          <span className="icon">
-            <FaLinkedin />
-          </span>
+          <a href="https://www.facebook.com/mubasshir07/" target="_blank">
+            <span className="icon">
+              <FaFacebookF />
+            </span>
+          </a>
+          <a href="https://github.com/Amubasshir" target="_blank">
+            <span className="icon">
+              <FaGithub />
+            </span>
+          </a>
+          <a href="https://twitter.com/lastmubasshir" target="_blank">
+            <span className="icon">
+              <FaTwitter />
+            </span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mubasshirahmed7/"
+            target="_blank"
+          >
+            <span className="icon">
+              <FaLinkedin />
+            </span>
+          </a>
         </div>
       </ContentWrapper>
     </footer>
