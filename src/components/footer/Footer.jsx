@@ -19,12 +19,12 @@ const Footer = () => {
         <div className="infoText">
           At Cineverse, we believe that every movie has a story to tell, and we
           are dedicated to sharing those stories with our audience. From
-          blockbusters to indie darlings, we cover a wide range of films and
-          genres, offering a diverse and engaging perspective on the world of
-          cinema. Thank you for visiting Cineverse, and we hope that our reviews
-          inspire you to explore the wonderful world of movies. Don't forget to
-          follow us on social media to stay up-to-date on the latest in movie
-          news and reviews.
+          blockbusters to indie darlings, we cover a wide range of films and tv
+          series that, offering a diverse and engaging perspective on the world
+          of cinema. Thank you for visiting Cineverse, and we hope that our
+          reviews inspire you to explore the wonderful world of movies. Don't
+          forget to follow us on social media to stay up-to-date on the latest
+          in movie news and reviews.
         </div>
         <div className="socialIcons">
           <a href="https://www.facebook.com/mubasshir07/" target="_blank">
