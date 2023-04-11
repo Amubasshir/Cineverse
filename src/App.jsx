@@ -8,7 +8,7 @@ import Details from './pages/details/Details';
 import Explore from './pages/explore/Explore';
 import Home from './pages/home/Home';
 import SearchResult from './pages/searchResult/SearchResult';
-import { getApiConfig, getGenres } from './store/homeSlice';
+import { getApiConfig } from './store/homeSlice';
 import { fetchDataFromApi } from './utils/api';
 
 function App() {
@@ -34,7 +34,6 @@ function App() {
   const genresCall = async () => {
     let promises = [];
     let endPoints = ['tv', 'movie'];
-    let allGenres = {};
 
     endPoints.forEach((url) => {
       promises.push(fetchDataFromApi(`/genre/${url}/list`));
@@ -42,11 +41,6 @@ function App() {
 
     const data = await Promise.all(promises);
     console.log(data);
-    data.map(({ genres }) => {
-      return genres.map((item) => (allGenres[item.id] = item));
-    });
-
-    dispatch(getGenres(allGenres));
   };
 
   return (
