@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import PosterFallback from '../../../assets/no-poster.png';
 import CircleRating from '../../../components/circleRating/CircleRating';
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper';
-import Img from '../../../components/lazyLoadImage/img';
+import Img from '../../../components/lazyLoadImage/lazyImg';
 import VideoPopup from '../../../components/videoPopup/VideoPopup';
 import useFetch from '../../../hooks/useFetch';
 import { PlayIcon } from '../Playbtn';
