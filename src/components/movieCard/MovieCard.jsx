@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import PosterFallback from '../../assets/no-poster.png';
 import CircleRating from '../circleRating/CircleRating';
 import Genres from '../genres/Genres';
-import Img from '../lazyLoadImage/Img';
+import Img from '../lazyLoadImage/lazyImg';
 import './style.scss';
 
 const MovieCard = ({ data, fromSearch, mediaType }) => {

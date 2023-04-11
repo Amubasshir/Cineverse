@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper';
-import Img from '../../../components/lazyLoadImage/img';
+import Img from '../../../components/lazyLoadImage/lazyImg';
 import useFetch from '../../../hooks/useFetch';
 import './style.scss';
 
